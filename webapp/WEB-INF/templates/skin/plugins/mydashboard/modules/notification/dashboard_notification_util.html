@@ -1,0 +1,15 @@
+<script>
+$(document).ready( function( ) {
+    $(".notification-head").click(function(e) {
+        var idNotification = $(this).data("id")
+		$(this).find('i').removeClass('fa-envelope');
+		$(this).find('i').addClass('fa-envelope-open');
+		
+        $.ajax({
+        	url: 'jsp/site/Portal.jsp?page=notificationApp&action=setStatusReadNotification',
+            type: "POST",
+			data: {idNotification: idNotification}
+		});
+    });
+});
+</script>
