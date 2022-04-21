@@ -1,0 +1,48 @@
+<#include "/commons_site.html"/>
+<#include "dashboard_notification_util.html"/>
+<div class="row">
+	<div class="offset-lg-2 col-lg-8">
+		<h2>#i18n{module.mydashboard.notification.myDashboardComponentNotification.pageTitle}</h2>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<#list notification_list as notification>
+				<#if notification??>
+				<div id="accordion">
+					<tbody>
+						<tr class="notification-head" data-id="${notification.idNotification}" data-toggle="collapse" data-target="#collapse${notification.idNotification}" aria-expanded="true" aria-controls="collapse${notification.idNotification}">
+							<td data-label="Date&nbsp;:">
+							<#if notification.read>
+								<i class="fa fa-envelope-open  main-color" aria-hidden="true"></i>
+							<#else>
+								<i class="fa fa-envelope main-color" aria-hidden="true"></i>
+							</#if>
+								&nbsp;${notification.dateCreation?date?string["dd.MM.yyyy"]}
+							</td>
+							<td data-label="Object :">
+								<strong>${notification.object!}</strong>
+							</td>
+							<td class="text-sm-left text-md-center" data-label="Sender : ">
+								${notification.sender!}
+							</td>
+						</tr> 
+						<tr id="collapse${notification.idNotification}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+							<td colspan="3">
+							  <div class="media mb-2">
+								  <div class="media-body pt-sm-2">
+										${notification.message}
+								  </div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</div>
+				</#if>
+				</#list>
+			</table>
+			<@paginationSitePageLinks paginator=paginator />
+		</div>
+	</div>
+</div>
+<script>
+
+</script>
