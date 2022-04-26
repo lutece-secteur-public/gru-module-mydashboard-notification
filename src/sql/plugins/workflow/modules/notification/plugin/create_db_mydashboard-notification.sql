@@ -1,8 +1,8 @@
 --
--- Structure for table notification
+-- Structure for table mydashboard_notification
 --
-DROP TABLE IF EXISTS notification;
-CREATE TABLE notification (
+DROP TABLE IF EXISTS mydashboard_notification;
+CREATE TABLE mydashboard_notification (
 	id_notification INT AUTO_INCREMENT,
 	is_read SMALLINT DEFAULT 0 NOT NULL,
     id_user VARCHAR(255) DEFAULT '' NOT NULLL,

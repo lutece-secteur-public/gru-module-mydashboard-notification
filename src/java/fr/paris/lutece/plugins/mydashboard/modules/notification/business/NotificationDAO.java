@@ -48,11 +48,11 @@ import fr.paris.lutece.util.sql.DAOUtil;
 public class NotificationDAO implements INotificationDAO
 {
     // Constants
-    private static final String SQL_QUERY_SELECT = "SELECT id_notification, is_read, id_user, object, message, date_creation, sender FROM notification WHERE id_notification = ? ORDER BY date_creation desc, is_read";
-    private static final String SQL_QUERY_INSERT = "INSERT INTO notification ( id_notification, is_read, id_user, object, message, date_creation, sender ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) ";
-    private static final String SQL_QUERY_DELETE = "DELETE FROM notification WHERE id_notification = ? ";
-    private static final String SQL_QUERY_UPDATE_READ = "UPDATE notification SET is_read = ? WHERE id_notification = ?";
-    private static final String SQL_QUERY_SELECT_USER = "SELECT id_notification, is_read, id_user, object, message, date_creation, sender FROM notification WHERE id_user = ? ORDER BY date_creation desc, is_read";
+    private static final String SQL_QUERY_SELECT = "SELECT id_notification, is_read, id_user, object, message, date_creation, sender FROM mydashboard_notification WHERE id_notification = ? ORDER BY date_creation desc, is_read";
+    private static final String SQL_QUERY_INSERT = "INSERT INTO mydashboard_notification ( id_notification, is_read, id_user, object, message, date_creation, sender ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) ";
+    private static final String SQL_QUERY_DELETE = "DELETE FROM mydashboard_notification WHERE id_notification = ? ";
+    private static final String SQL_QUERY_UPDATE_READ = "UPDATE mydashboard_notification SET is_read = ? WHERE id_notification = ?";
+    private static final String SQL_QUERY_SELECT_USER = "SELECT id_notification, is_read, id_user, object, message, date_creation, sender FROM mydashboard_notification WHERE id_user = ? ORDER BY date_creation desc, is_read";
 
     /**
      * {@inheritDoc}
