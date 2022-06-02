@@ -1,0 +1,1 @@
+package fr.paris.lutece.plugins.mydashboard.modules.notification.business;
