@@ -13,7 +13,7 @@
     <artifactId>module-mydashboard-notification</artifactId>
     <packaging>lutece-plugin</packaging>
     
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Lutece Module Mydashboard Notification</name>
 
     <repositories>
@@ -66,6 +66,6 @@
         <connection>scm:git:https://github.com/lutece-secteur-public/gru-module-mydashboard-notification.git</connection>
         <developerConnection>scm:git:https://github.com/lutece-secteur-public/gru-module-mydashboard-notification.git</developerConnection>
         <url>https:https://github.com/lutece-secteur-public/gru-module-mydashboard-notification.git</url>
-        <tag>module-mydashboard-notification-1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 </project>
